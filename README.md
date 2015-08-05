@@ -5,5 +5,12 @@
   npm install
   gulp
 ```
+or use Docker
+```
+docker build -t demo-es6-optiflows ./
+docker run -d -P --name es6 demo-es6-optiflows
+```
   
 Open your browser and go to http://localhost:8080
+
+(if you're using Docker, `docker ps es6` to see on which port it has been forwarded)
