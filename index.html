@@ -1,0 +1,31 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo-es-6</title>
+  </head>   
+  <body>
+  <textarea disabled id="room" style="height:300px; width: 500px; "></textarea>
+    <br />
+  Developer: 
+  <input type="text" id="dev" placeholder="Developer's sentence"/>
+  <input type="submit" id="dev_submit" value="send" />
+
+  <script src="node_modules/traceur/bin/traceur.js"></script>
+  <script src="dist/base.js"></script>
+  <script src="dist/app1.js"></script>
+  <script>
+        var init_room = System.get("app1/init.js").default;
+        var $room = document.getElementById('room');
+        $room.value = "#admin: Welcome! \nNow you can speak with Grumpy.\n";
+        var dev = {name: 'dev',
+                    field: document.getElementById('dev'),
+                    btn: document.getElementById('dev_submit')
+                   };
+        init_room($room, dev);
+  </script>
+  </body>
+  </html>
