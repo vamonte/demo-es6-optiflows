@@ -36,10 +36,14 @@ class Tibo extends Developer {
         return this.bullshit[random_id];
     }
 
-    say(sentence) {
+    answerTo(sentence){
         if (sentence.indexOf("windows") > -1) {
-            var sentence = "C'est de la merde";
-        } else {
+            sentence = "C'est de la merde";
+        }
+        return this.say(sentence);
+    }
+    say(sentence = "") {
+        if (!sentence) {
             var sentence = this.getRandomBullshit();
         }
         return super.say(sentence);
