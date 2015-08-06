@@ -39,12 +39,14 @@ class Tibo extends Developer {
     answerTo(sentence){
         if (sentence.indexOf("windows") > -1) {
             sentence = "C'est de la merde";
+        }else{
+            sentence = "";
         }
         return this.say(sentence);
     }
     say(sentence = "") {
         if (!sentence) {
-            var sentence = this.getRandomBullshit();
+            sentence = this.getRandomBullshit();
         }
         return super.say(sentence);
     }
