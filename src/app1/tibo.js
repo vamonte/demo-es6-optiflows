@@ -39,6 +39,8 @@ class Tibo extends Developer {
     answerTo(sentence){
         if (sentence.indexOf("windows") > -1) {
             sentence = "C'est de la merde";
+        }else if(sentence.indexOf("PR") > -1){
+            sentence = "Bordel de merde, les PR ça veut dire 'je veux merger ce qu'il y a sur ma branche'. Si c'est 'juste' pour faire un diff : https://www.google.com/search?q=diff%20tool";
         }else{
             sentence = "";
         }
