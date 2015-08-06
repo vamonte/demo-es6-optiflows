@@ -1,6 +1,4 @@
-FROM iojs:onbuild
-
-RUN npm install --global gulp
+FROM kmelkez/gulp
 
 ADD . /home
 RUN cd /home/ && npm install

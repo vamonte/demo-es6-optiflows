@@ -17,8 +17,8 @@ class Room {
         this.$room.value += `\n ${sentence}`;
     }
 
-    tiboAnswer(){
-        var sentence = this.tibo.say("");
+    tiboAnswer(sentence) {
+        var sentence = this.tibo.say(sentence);
         this.addSentence(sentence);
     }
 
@@ -32,7 +32,7 @@ class Room {
         var sentence = this.developer.say(field_value);
         this.addSentence(sentence);
         this.$developer_field.value = "";
-        this.tiboAnswer();
+        this.tiboAnswer(sentence);
     }
 }
 
